@@ -17,3 +17,13 @@ def obtener_hora_internet():
         return fecha, hora
     else:
         raise Exception("No se pudo obtener la hora de Internet.")
+    
+
+# Función para establecer la hora en Windows
+def establecer_hora(fecha, hora):
+    # Establecer la fecha
+    fecha_format = fecha.replace("-", "/")  # Formato MM/DD/YYYY para Windows
+    subprocess.run(['date', fecha_format], shell=True)
+
+    # Establecer la hora
+    subprocess.run(['time', hora], shell=True)
