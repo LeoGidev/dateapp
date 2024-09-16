@@ -32,7 +32,7 @@ def establecer_hora(fecha, hora):
 if __name__ == "__main__":
     try:
         fecha, hora = obtener_hora_internet()
-        print(f"Fecha obtenida: {fecha}")
+        print(f"Fecha obtenida: {fecha}")#muestra la hora obtenida
         print(f"Hora obtenida: {hora}")
         
         # Establecer fecha y hora en el sistema
