@@ -27,3 +27,16 @@ def establecer_hora(fecha, hora):
 
     # Establecer la hora
     subprocess.run(['time', hora], shell=True)
+
+# Principal
+if __name__ == "__main__":
+    try:
+        fecha, hora = obtener_hora_internet()
+        print(f"Fecha obtenida: {fecha}")
+        print(f"Hora obtenida: {hora}")
+        
+        # Establecer fecha y hora en el sistema
+        establecer_hora(fecha, hora)
+        print("Fecha y hora actualizadas correctamente.")
+    except Exception as e:
+        print(f"Error: {e}")
